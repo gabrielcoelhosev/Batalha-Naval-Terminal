@@ -1,6 +1,5 @@
 import kotlin.random.Random
-//coments
-//coments
+
 const val TAMANHO = 10
 const val NUM_PORTA_AVIOES = 10
 const val NUM_CRUZADOR = 1

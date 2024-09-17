@@ -1,5 +1,6 @@
 import kotlin.random.Random
-
+//coments
+//coments
 const val TAMANHO = 10
 const val NUM_PORTA_AVIOES = 10
 const val NUM_CRUZADOR = 1
@@ -130,7 +131,7 @@ fun exibirTabuleiro(
     val BLUE = "\u001B[34m"
     val GRAY = "\u001B[37m"
 
-    println("  ${0.until(TAMANHO).joinToString("   ")}")
+    println("    ${0.until(TAMANHO).joinToString("   ")}")
     println("  ${"-".repeat(TAMANHO * 4 + 1)}")
 
     for (linha in tabuleiro.indices) {
@@ -144,6 +145,7 @@ fun exibirTabuleiro(
                     TipoNavio.REBOCADOR -> "$RED${tabuleiro[linha][coluna].simbolo}$RESET"
                     else -> ""
                 }
+
                 pos in erros -> "$GREEN${detalhesErros[pos]}$RESET"
                 verdadeiro && tabuleiro[linha][coluna] != TipoNavio.VAZIO -> when (tabuleiro[linha][coluna]) {
                     TipoNavio.PORTA_AVIOES -> "$BLUE${tabuleiro[linha][coluna].simbolo}$RESET"
@@ -151,6 +153,7 @@ fun exibirTabuleiro(
                     TipoNavio.REBOCADOR -> "$BLUE${tabuleiro[linha][coluna].simbolo}$RESET"
                     else -> "$GRAY${tabuleiro[linha][coluna].simbolo}$RESET"
                 }
+
                 else -> " "
             }
             print("$simbolo | ")

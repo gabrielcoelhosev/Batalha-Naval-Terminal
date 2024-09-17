@@ -26,7 +26,6 @@ fun main() {
         var pontuacao = 0
         var tentativas = 0
 
-        // Posicionar navios
         posicionarNavios(tabuleiro, TipoNavio.PORTA_AVIOES, NUM_PORTA_AVIOES, localizacoesNavios)
         posicionarNavios(tabuleiro, TipoNavio.CRUZADOR, NUM_CRUZADOR, localizacoesNavios)
         posicionarNavios(tabuleiro, TipoNavio.REBOCADOR, NUM_REBOCADORES, localizacoesNavios)

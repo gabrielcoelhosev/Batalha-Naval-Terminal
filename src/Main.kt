@@ -33,7 +33,7 @@ fun main() {
         while (tentativas < MAX_TENTATIVAS) {
             exibirTabuleiro(tabuleiro, acertos, erros, detalhesErros)
 
-            println("Digite as coordenadas (linha coluna): ")
+            println("Digite as coordenadas (linha coluna) separadas por espaço: ")
             val entrada = readLine() ?: ""
             val (linha, coluna) = entrada.split(" ").map { it.toIntOrNull() ?: -1 }
 
@@ -43,7 +43,7 @@ fun main() {
             }
 
             if (acertos.contains(Posicao(linha, coluna)) || erros.contains(Posicao(linha, coluna))) {
-                println("Posição já alvo. Tente novamente.")
+                println("Posição já atingida. Tente novamente.")
                 continue
             }
 
@@ -145,6 +145,7 @@ fun exibirTabuleiro(
                 }
 
                 pos in erros -> "$GREEN${detalhesErros[pos]}$RESET"
+
                 verdadeiro && tabuleiro[linha][coluna] != TipoNavio.VAZIO -> when (tabuleiro[linha][coluna]) {
                     TipoNavio.PORTA_AVIOES -> "$BLUE${tabuleiro[linha][coluna].simbolo}$RESET"
                     TipoNavio.CRUZADOR -> "$BLUE${tabuleiro[linha][coluna].simbolo}$RESET"

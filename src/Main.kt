@@ -1,6 +1,3 @@
-//Gabriel Coelho Severino
-//Leandro Jader Ramos Nunes
-//André Nícolas Granemann Coelho
 
 import kotlin.random.Random
 
